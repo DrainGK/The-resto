@@ -1,0 +1,420 @@
+
+.section-1
+    display: grid
+    grid-template-columns: 50% 50%
+    background: white
+
+    @media screen and (max-width: 680px)
+        grid-template-columns: 1fr
+
+    .section-1-left
+
+        margin: 15px
+        padding: 30px 15px
+        border: 1px dashed $color2
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        h2
+            font-family: $font1
+            color: $color2
+            font-size: 2rem
+            font-weight: 500
+
+        h3
+            font-family: $font2
+            text-transform: uppercase
+            margin-top: -12px
+
+        p
+            font-family: $font3
+            color: $color3
+            text-align: center
+            font-size: 0.8rem
+
+        img
+            margin: 26px
+
+        img:nth-of-type(2)
+            height: 70px
+            border-radius: 150px
+            margin-bottom: 8px
+
+        h4
+            font-family: $font3
+            color: black
+            font-size: 0.9rem
+            font-weight: 100
+
+        h5
+            font-family: $font2
+            color: $color1
+            text-transform: uppercase
+            font-size: 0.7rem
+            text-align: center
+            margin-bottom: 20px
+
+    .section-pic
+        background: url(../assets/img/store-01.jpg) center/cover
+
+        @media screen and (max-width: 680px)
+            display: none
+
+.section-2
+    color: white
+    padding-bottom: 100px
+    position: relative
+
+    &:after
+        content: ""
+        position: absolute
+        height: 620px
+        width: 100%
+        background: url(../assets/img/bg-menu-01.jpg) center/cover
+        left: 50%
+        bottom: -330px
+        transform: translate(-50%, -50%)
+
+    h2
+        font-family: $font1
+        color: $color2
+        font-size: 2rem
+        font-weight: 500
+        margin-top: 30px
+
+    img
+        margin: 26px
+
+    ul
+        display: flex
+        justify-content: space-between
+        align-items: center
+        color: white
+        margin: 0 auto
+        margin-bottom: 20px
+        width: 40%
+        font-size: 0.7rem
+
+        li
+            border-bottom: 1px solid grey
+            padding-bottom: 8px
+
+    .meals
+        background: white
+        width: 50%
+        max-width: 800px
+        margin: 0 auto
+        border-top: 4px solid $color2
+        padding: 15px 0
+        display: grid
+        grid-template-columns: 50% 50%
+        z-index: 1000
+        position: relative
+
+        .meal
+            display: grid
+            grid-template-columns: 25% 60% 15%
+            border-bottom: 1px dashed $color1
+            padding: 30px 0
+            margin: 0 20px
+
+            img
+                width: 100%
+                object-fit: cover
+                border-radius: 50px
+                align-self: center
+                margin: 0
+
+            .meal-text
+                text-align: left
+                display: flex
+                justify-content: center
+                flex-direction: column
+                margin: 0 10px
+                height: 100%
+                color: black
+                h3
+                    font-size: 0.8rem
+                    font-weight: bold
+                    margin-bottom: 5px
+                p
+                    font-size: 0.8rem
+
+            > p
+                color: $color2
+                font-weight: 600
+                display: flex
+                align-items: center
+
+.section-3
+    width: 80%
+    margin: 0 auto
+    margin-top: 60px
+    margin-bottom: 60px
+
+    .form-content
+        display: grid
+        grid-template-columns: 30% 70%
+
+        .schedule
+            background: black
+            color: white
+
+            .hours-content
+                border: 1px dashed white
+                margin: 20px
+
+                h3
+                    color: $color2
+                    font-family: $font1
+                    font-size: 2rem
+                    font-weight: 500
+                    margin-top: 15px
+
+                h4
+                    @include title
+                    font-size: 1rem
+                    margin-top: -10px
+                    margin-bottom: 20px
+
+                h5
+                    font-family: $font3
+                    font-size: 1.2rem
+                    color: $color2
+                    margin-top: 40px
+                    margin-bottom: 20px
+                    text-transform: uppercase
+
+                p
+                    font-family: $font3
+                    font-size: 0.8rem
+
+        .form-infos
+            background: white
+
+            .form-infos-container
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: column
+
+                h2
+                    font-family: $font1
+                    color: $color2
+                    font-size: 2.5rem
+                    font-weight: 500
+                    margin-bottom: -20px
+                    margin-top: 50px
+                h3
+                    font-family: $font2
+                    color: $color3
+                    font-weight: bold
+                    font-size: 1.7rem
+
+                img
+                    margin-top: 20px
+                    margin-bottom: 20px
+
+                .form-inputs
+                    display: grid
+                    grid-template-columns: 33% 33% 33%
+                    margin: 0 auto
+
+                    input
+                        border: none
+                        border-bottom: 1.5px solid grey
+                        width: 170px
+                        height: 50px
+                        margin: 10px
+
+                    input:focus
+                        outline: none
+
+                    select
+                        border: none
+                        border-bottom: 1.5px solid grey
+                        width: 170px
+                        height: 50px
+                        margin: 10px
+
+                    select:focus
+                        outline: noneselect
+
+            button
+                width: 180px
+                height: 50px
+                border: none
+                border-radius: 150px
+                background: $color3
+                color: white
+                font-size: 1rem
+                letter-spacing: 2px
+                font-family: $font2
+                margin-top: 30px
+
+.section-4
+    width: 80%
+    margin: 0 auto
+    margin-bottom: 60px
+    padding: 50px 20px 90px
+
+    .event-container
+        max-width: 1000px
+        margin: 0 auto
+        h2
+            color: $color2
+            font-family: $font1
+            font-size: 2rem
+            font-weight: 500
+            margin-top: 15px
+
+        h3
+            @include title
+            font-size: 1.7rem
+            color: white
+            margin-top: -10px
+
+        img
+            margin-top: 20px
+            margin-bottom: 20px
+
+        .event-grid
+            display: grid
+            grid-template-columns: 58% 42%
+            grid-template-rows: 1fr 1fr
+            grid-template-areas: "a b" "c b"
+            gap: 20px
+
+            .date-content
+                background: $color3
+                height: 86px
+                width: 86px
+                margin: 0 auto
+                color: white
+                flex-direction: column
+                line-height: 22px
+                @include childCenter
+
+                h6
+                    font-size: 1.7rem
+
+            .address
+                background: white
+
+                h4
+                    letter-spacing: 1px
+                    font-size: 1.3rem
+                    font-weight: 500
+                    padding-left: 8px
+
+                p
+                    font-size: 0.9rem
+                    color: $color1
+                    margin-top: 20px
+                    letter-spacing: 1px
+
+                    i
+                        margin-right: 3px
+                        font-size: 0.7rem
+                        transform: translateY(-2px)
+
+                        &:nth-child(2)
+                            margin-left: 10px
+                h5
+                    letter-spacing: 2px
+                    margin-top: 25px
+
+            .event-left
+                display: grid
+                grid-template-columns: 40% 60%
+                text-align: left
+
+                .date
+                    @include childCenter
+
+                .address
+                    padding: 30px 20px
+
+            .event-1
+                grid-area: a
+                .date
+                    background: url(../assets/img/event-01.jpg) center/cover
+
+            .event-2
+                grid-area: c
+                .date
+                    background: url(../assets/img/event-02.jpg) center/cover
+
+            .event-3
+                grid-area: b
+                background: url(../assets/img/event-03.jpg) center/cover
+                padding: 30px
+
+                .address
+                    height: 100%
+                    padding: 0 12px
+
+                    h4
+                        margin: 0 40px 15px
+
+                    h5
+                        margin: 45px 0
+
+.section-5
+    padding: 70px 0 230px
+    position: relative
+
+    &::after
+        content: ""
+        height: 350px
+        width: 100%
+        position: absolute
+        background: url(../assets/img/gmap.jpg) center/cover
+        left: 0
+        bottom: 0
+        z-index: -1000
+
+    .quote-container
+        background: white
+        z-index: 3
+        width: 80%
+        max-width: 1000px
+        margin: 0 auto
+        padding: 65px 70px
+        box-shadow: 0 0 3px #333
+
+        &::before
+            content: ""
+            position: absolute
+            background: url(../assets/img/avatar-02.jpg) center/cover
+            height: 60px
+            width: 60px
+            top: 35px
+            left: 50%
+            transform: translateX(-50%)
+            border-radius: 50px
+
+        .text-container
+
+            font-size: 1rem
+            line-height: 25px
+            margin-bottom: 30px
+
+            &:before
+                content: "❝"
+
+            &:after
+                content: "❞"
+
+            &:before,
+            &:after
+                font-size: 1.5rem
+
+        h2
+            font-family: $font3
+            margin-bottom: 30px
+            font-weight: 100
+
+        p
+            color: $color2

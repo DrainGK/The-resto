@@ -1,0 +1,78 @@
+header
+    height: 100vh
+    display: flex
+    justify-content: center
+    text-align: center
+    flex-direction: column
+    position: relative
+    background: url("../assets/img/bg-slider-06.jpg") center/cover
+
+    nav
+        display: flex
+        justify-content: space-between
+        align-items: center
+        color: white
+        width: 80%
+        height: 50px
+        left: 50%
+        transform: translateX(-50%)
+        padding-top: 20px
+        top: 0
+        position: absolute
+
+        .logo-resto
+            font-family: $font1
+            font-size: 2rem
+
+        .menu
+
+            width: 80%
+            margin: 30px
+            ul
+                display: flex
+                justify-content: space-around
+                align-items: center
+                li
+                    cursor: pointer
+                    font-family: $font3
+                    font-size: 0.7rem
+                    text-transform: uppercase
+        .logo-sns
+            ul
+                display: flex
+                justify-content: space-between
+                align-items: center
+                li
+                    margin: 10px
+                    font-size: 0.7rem
+                    cursor: pointer
+    .header-content
+        display: flex
+        justify-content: center
+        text-align: center
+        flex-direction: column
+        p
+            color: #d58401
+            font-family: $font1
+            font-size: 2rem
+            margin-bottom: 0
+        h1
+            @include title
+            color: white
+            font-size: 3rem
+            letter-spacing: 10px
+            margin-top: 0
+
+        span
+            img
+                margin-top: 20px
+                width: 20px
+                height: 20px
+
+        h3
+            color: #d7d7d7
+            text-transform: uppercase
+            margin-top: 20px
+            font-family: $font3
+            font-size: 0.8rem
+            letter-spacing: 5px
